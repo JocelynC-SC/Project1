@@ -1,18 +1,15 @@
-const closedFace = document.querySelector(".closed");
-const openFace = document.querySelector(".open");
+const sleepingCat = document.querySelector(".sleeping");
+const awakeCat = document.querySelector(".awake");
+const statusTitle = document.getElementById("status-title");
 
-// Event Listener
-closedFace.addEventListener("click", () => {
-    if (openFace.classList.contains("open")) {
-        openFace.classList.add("active");
-        closedFace.classList.remove("active");
-        
-    }
+sleepingCat.addEventListener("click", () => {
+    awakeCat.classList.add("active");
+    sleepingCat.classList.remove("active");
+    statusTitle.textContent = "zoomies!";
 });
 
-openFace.addEventListener("click", () => {
-    if (closedFace.classList.contains("closed")) {
-        closedFace.classList.add("active");
-        openFace.classList.remove("active");
-    }
+awakeCat.addEventListener("click", () => {
+    sleepingCat.classList.add("active");
+    awakeCat.classList.remove("active");
+    statusTitle.textContent = "Sleeping...";
 });
